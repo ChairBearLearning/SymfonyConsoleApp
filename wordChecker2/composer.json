@@ -1,0 +1,40 @@
+{
+    "name": "indiya/word-checker2",
+    "require": {
+        "symfony/console": "6.0.*",
+        "symfony/dotenv": "6.0.*",
+        "symfony/flex": "^2",
+        "symfony/framework-bundle": "6.0.*",
+        "symfony/runtime": "6.0.*",
+        "symfony/yaml": "6.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src",
+            "bin\\": "bin"
+        }
+    }, "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "App/Tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OuroborosSerpentine",
+            "email": "60927360+OuroborosSerpentine@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/browser-kit": "6.0.*",
+        "symfony/css-selector": "6.0.*",
+        "symfony/phpunit-bridge": "^6.0",
+        "symfony/maker-bundle": "^1.36"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+}
