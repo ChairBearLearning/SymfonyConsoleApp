@@ -12,7 +12,7 @@ use App\Palindrome;
  * 
  */
 class PalindromeCommand extends Command {
-    protected function configure() {
+    protected function configure(): void {
         $this
             ->setName('palindrome')
             ->setDescription('A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward.')
@@ -21,7 +21,7 @@ class PalindromeCommand extends Command {
         ;
     }
     
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output): int {
         $string = $input->getArgument('word');
         
         $palindrome = new Palindrome();
@@ -31,5 +31,6 @@ class PalindromeCommand extends Command {
         } else {
             $output->writeln('This is not palindrome.');
         }
+        return Command::SUCCESS;
     }
 }

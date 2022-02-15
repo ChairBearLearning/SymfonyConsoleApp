@@ -11,3 +11,4 @@ My time break down is as below:
 - 1 Hour learning about Symfony Console Applications
 - 50 Min TDD (Test Driven Development)
 - 30 Min adding documentation  
+- 5 Min amend code for new Symfony version (error fix)

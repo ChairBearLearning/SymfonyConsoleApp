@@ -12,7 +12,7 @@ use App\Pangram;
  * 
  */
 class PangramCommand extends Command {
-    protected function configure() {
+    protected function configure(): void {
         $this
             ->setName('pangram')
             ->setDescription('A Pangram for a given alphabet is a sentence using every letter of the alphabet at least once. ')
@@ -21,7 +21,7 @@ class PangramCommand extends Command {
         ;
     }
     
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output): int {
         $string = $input->getArgument('phrase');
         
         $palindrome = new Pangram();
@@ -31,5 +31,6 @@ class PangramCommand extends Command {
         } else {
             $output->writeln('This is not pangram.');
         }
+        return Command::SUCCESS;
     }
 }
